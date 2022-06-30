@@ -1,0 +1,39 @@
+﻿@using P225Allup.Areas.Manage.Controllers
+@model Studnet
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="row justify-content-lg-between">
+    <div class="col-lg-2">
+        <!-- Page Heading -->
+        <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <form method="post" asp-area="manage" asp-controller="brand" asp-action="CreateBrand">
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label"></label>
+                <input class="form-control" asp-for="Name">
+                <span class="text text-danger" asp-validation-for="Name"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="SurName" class="form-label"></label>
+                <input asp-for="SurName" class="form-control">
+                <span class="text-danger" asp-validation-for="SurName"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label"></label>
+                <input asp-for="Email" class="form-control">
+                <span class="text-danger" asp-validation-for="Email"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Age" class="form-label"></label>
+                <input asp-for="Age" class="form-control">
+                <span class="text-danger" asp-validation-for="Age"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Create</button>
+        </form>
+    </div>
+</div>
