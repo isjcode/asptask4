@@ -80,3 +80,20 @@
             </div> <!-- Modal Quick View Content -->
         </div>
     </div> <!-- row -->
+
+
+<script type="text/javascript">
+document.getElementsByClassName('product-add-cart')[0].addEventListener('click', () => {
+		const count = document.getElementsByClassName('quantity')[0].children[1].value;
+        $.ajax({
+        url: "/Basket/AddToBasket",
+        type: 'GET',
+        data: { id: @Model.Id, count: count},
+        contentType: 'application/json; charset=utf-8',
+        dataType: "text",
+        success: function (data) {
+            document.getElementsByClassName('header-cart')[0].innerHTML = data;
+        }
+    });
+})
+</script>

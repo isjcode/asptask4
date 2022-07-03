@@ -25,7 +25,7 @@ namespace P225Allup.Controllers
             return View();
         }
 
-        public async Task<IActionResult> AddToBasket(int? id)
+        public async Task<IActionResult> AddToBasket(int? id, int count = 0)
         {
             if (id == null) return BadRequest();
 
@@ -50,7 +50,7 @@ namespace P225Allup.Controllers
                     BasketVM basketVM = new BasketVM
                     {
                         ProductId = (int)id,
-                        Count = 1
+                        Count = count 
                     };
 
                     basketVMs.Add(basketVM);
@@ -63,7 +63,7 @@ namespace P225Allup.Controllers
                 BasketVM basketVM = new BasketVM
                 {
                     ProductId = (int)id,
-                    Count = 1
+                    Count = count 
                 };
 
                 basketVMs.Add(basketVM);

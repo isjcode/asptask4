@@ -3,7 +3,6 @@
         e.preventDefault();
 
         //let url = $(this).attr('href');
-
         fetch($(this).attr('href'))
             .then(res => res.text())
             .then(data => { $('.header-cart').html(data) });
@@ -131,12 +130,15 @@
         }
     }
 })
+
+
 document.getElementsByClassName('addcart')[0].addEventListener('click', (e) => {
     e.preventDefault();
     const pathname = window.location.pathname;
     let id = '';
-    for (let i = pathname.length  - 1; i > 0; i--) {
-        console.log(i);
+    const count = document.getElementsByClassName('quantity')[0].children[1].value;
+
+    for (let i = pathname.length - 1; i > 0; i--) {
         if (!isNaN(pathname[i])) {
             id = pathname[i] + id;
         }
@@ -147,7 +149,17 @@ document.getElementsByClassName('addcart')[0].addEventListener('click', (e) => {
 
     const port = window.location.port;
 
-    fetch(`localhost:${port}/Basket/AddToBasket/${id}`);
+    $.ajax({
+        url: "/Basket/AddToBasket",
+        type: 'GET',
+        data: { id: id, count: count},
+        contentType: 'application/json; charset=utf-8',
+        dataType: "text",
+        success: function (data) {
+            document.getElementsByClassName('header-cart')[0].innerHTML = data;
+        }
+    });
+
 });
 
 
