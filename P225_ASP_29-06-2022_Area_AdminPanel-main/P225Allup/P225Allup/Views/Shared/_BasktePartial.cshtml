@@ -6,7 +6,7 @@
 }
 
 <div class="cart-btn">
-    <a href="#">
+    <a asp-controller="Basket" asp-action="Index">
         <i class="icon ion-bag"></i>
         <span class="text">Cart :</span>
         <span class="total">$@((totalPrice + totalExTax).ToString("F2"))</span>

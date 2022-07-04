@@ -53,9 +53,9 @@
                     <div class="product-quantity">
                         <h5 class="title">Quantity</h5>
                         <div class="quantity d-flex">
-                            <button type="button" id="sub" class="sub"><i class="fal fa-minus"></i></button>
+                            <button type="button" id="sub" class="subs"><i class="fal fa-minus"></i></button>
                             <input type="text" value="1" />
-                            <button type="button" id="add" class="add"><i class="fal fa-plus"></i></button>
+                            <button type="button" id="add" class="adds"><i class="fal fa-plus"></i></button>
                         </div>
                     </div>
                 </div>
@@ -96,4 +96,15 @@ document.getElementsByClassName('product-add-cart')[0].addEventListener('click',
         }
     });
 })
+
+        $('.adds').click(function () {
+            if ($(this).prev().val()) {
+                $(this).prev().val(+$(this).prev().val() + 1);
+            }
+        });
+        $('.subs').click(function () {
+            if ($(this).next().val() > 1) {
+                if ($(this).next().val() > 1) $(this).next().val(+$(this).next().val() - 1);
+            }
+        });
 </script>

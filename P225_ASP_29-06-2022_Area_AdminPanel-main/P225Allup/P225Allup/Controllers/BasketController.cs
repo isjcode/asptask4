@@ -20,9 +20,23 @@ namespace P225Allup.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            List<BasketVM> basketVMs = null;
+            string coockie = HttpContext.Request.Cookies["basket"];
+
+
+
+            if (!string.IsNullOrWhiteSpace(coockie))
+            {
+                basketVMs = JsonConvert.DeserializeObject<List<BasketVM>>(coockie);
+            }
+            else
+            {
+                basketVMs = new List<BasketVM>();
+            }
+
+            return View(await _getBasketAsync(coockie));
         }
 
         public async Task<IActionResult> AddToBasket(int? id, int count = 0)

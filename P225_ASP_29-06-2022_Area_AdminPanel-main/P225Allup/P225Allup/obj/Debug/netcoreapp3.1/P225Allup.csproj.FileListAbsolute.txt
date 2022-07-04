@@ -329,3 +329,4 @@ C:\Users\lasau\Downloads\P225_ASP_29-06-2022_Area_AdminPanel-main\P225_ASP_29-06
 C:\Users\lasau\Downloads\P225_ASP_29-06-2022_Area_AdminPanel-main\P225_ASP_29-06-2022_Area_AdminPanel-main\P225Allup\P225Allup\obj\Debug\netcoreapp3.1\P225Allup.dll
 C:\Users\lasau\Downloads\P225_ASP_29-06-2022_Area_AdminPanel-main\P225_ASP_29-06-2022_Area_AdminPanel-main\P225Allup\P225Allup\obj\Debug\netcoreapp3.1\P225Allup.pdb
 C:\Users\lasau\Downloads\P225_ASP_29-06-2022_Area_AdminPanel-main\P225_ASP_29-06-2022_Area_AdminPanel-main\P225Allup\P225Allup\obj\Debug\netcoreapp3.1\P225Allup.genruntimeconfig.cache
+C:\Users\lasau\Downloads\P225_ASP_29-06-2022_Area_AdminPanel-main\P225_ASP_29-06-2022_Area_AdminPanel-main\P225Allup\P225Allup\obj\Debug\netcoreapp3.1\Razor\Views\Basket\Index.cshtml.g.cs
